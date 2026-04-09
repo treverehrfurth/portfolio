@@ -4,12 +4,14 @@ import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import SearchCollection from "@components/SearchCollection";
+import ArrowCard from "@components/ArrowCard";
 import { PROJECTS } from "@consts";
-import type { CollectionEntry } from "astro:content";
 
 const projects = (await getCollection("projects"))
   .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const featured = projects.filter((project) => project.data.featured);
 
 const tags = [
   ...new Set(projects.flatMap((project) => project.data.tags)),
@@ -31,6 +33,19 @@ const estimated_initial_size =
     </div>
   </TopLayout>
   <BottomLayout>
+    {featured.length > 0 && (
+      <div class="animate space-y-4 mb-12">
+        <p class="font-semibold text-black dark:text-white">Featured</p>
+        <ul class="space-y-4">
+          {featured.map((project) => (
+            <li>
+              <ArrowCard entry={project} />
+            </li>
+          ))}
+        </ul>
+        <hr class="border-black/10 dark:border-white/20" />
+      </div>
+    )}
     <div
       id="search-collection-wrapper"
       class="animate"

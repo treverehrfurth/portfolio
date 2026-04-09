@@ -114,6 +114,48 @@ const stack = [
         </article>
       </section>
 
+      <!-- Skills Section -->
+      <section class="animate">
+        <div class="space-y-6">
+          <p class="font-semibold text-black dark:text-white">
+            Skills & Technologies
+          </p>
+          {[
+            {
+              category: "Cloud & Infrastructure",
+              items: ["Azure", "AWS", "GCP", "Terraform", "Ansible", "Docker", "Kubernetes", "Tailscale", "Linux"],
+            },
+            {
+              category: "Data & Analytics",
+              items: ["Snowflake", "Databricks", "DBT", "Fivetran", "Apache Airflow", "Kestra", "Matillion", "Coalesce", "Iceberg", "Python"],
+            },
+            {
+              category: "Security & Identity",
+              items: ["Microsoft Entra ID", "SSO / SCIM", "Microsoft Intune", "Wazuh", "Bitwarden", "IAM", "Zero Trust"],
+            },
+            {
+              category: "Enterprise Platforms",
+              items: ["M365", "SharePoint", "HubSpot", "Paycom", "Atlassian", "QuickBooks"],
+            },
+            {
+              category: "Engineering",
+              items: ["Golang", "SQL", "Bash", "CI/CD", "Git", "GitHub", "GitLab", "Datadog", "Grafana", "Postman"],
+            },
+          ].map(({ category, items }) => (
+            <div>
+              <p class="text-sm text-black/50 dark:text-white/50 mb-2">{category}</p>
+              <div class="flex flex-wrap gap-2">
+                {items.map(item => (
+                  <span class="text-xs px-2 py-1 rounded border border-black/15 dark:border-white/20 text-black/70 dark:text-white/70">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <!-- Blog Preview Section -->
       <section class="animate">
         <div class="space-y-4">
@@ -134,32 +176,6 @@ const stack = [
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <!-- Tech Stack Section -->
-      <section class="animate">
-        <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">
-            Website build with
-          </p>
-          <div class="flex flex-wrap items-center gap-2 mt-5">
-            {stack.map(item => (
-              <StackCard 
-                text={item.text}
-                icon={item.icon}
-                href={item.href}
-              />
-            ))}
-          </div>
-          <div>
-            Performing reactivity and statefulness, special guest
-            <a href="https://www.solidjs.com/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                SolidJS
-              </span>
-            </a>
-          </div>
         </div>
       </section>
 
