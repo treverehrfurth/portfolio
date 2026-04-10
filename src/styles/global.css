@@ -29,7 +29,7 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
-
+  font-size: 18px;
 }
 
 html.dark {

@@ -3,6 +3,7 @@ title: "IT Operations isn't About Systems — It's About Enabling People to Do T
 summary: "When IT Operations is working well, people don't notice it. That invisibility is a form of excellence — and the reason IT Ops is so often overlooked, understaffed, and underinvested."
 date: "Jan 30, 2026"
 featured: true
+image: ./img1-hero.png
 draft: false
 tags:
   - Leadership

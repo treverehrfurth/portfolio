@@ -2,6 +2,8 @@
 title: "Free Automated KB/Doc/Blog Site w/SSO via Azure SWA"
 summary: "How to build, run, and host a secure website for free with SSO for a knowledge base, documentation site, or blog — using Jekyll, GitHub Actions, and Azure Static Web Apps."
 date: "Jan 15, 2026"
+featured: true
+image: ./img1-hero.png
 draft: false
 tags:
   - Azure

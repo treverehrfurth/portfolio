@@ -2,6 +2,7 @@
 title: "Enterprise IAM & Security Modernization"
 summary: "Centralized identity and access management across a global organization, eliminating shared accounts and reducing access drift through SSO, SCIM provisioning, and MFA enforcement."
 date: "Mar 1, 2025"
+featured: true
 draft: false
 tags:
   - Security

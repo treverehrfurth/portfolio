@@ -12,25 +12,27 @@ const work = defineCollection({
 
 const blog = defineCollection({
   type: "content",
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     summary: z.string(),
     date: z.coerce.date(),
     tags: z.array(z.string()),
     draft: z.boolean().optional(),
     featured: z.boolean().optional(),
+    image: image().optional(),
   }),
 })
 
 const projects = defineCollection({
   type: "content",
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     summary: z.string(),
     date: z.coerce.date(),
     tags: z.array(z.string()),
     draft: z.boolean().optional(),
     featured: z.boolean().optional(),
+    image: image().optional(),
     demoUrl: z.string().optional(),
     repoUrl: z.string().optional(),
   }),

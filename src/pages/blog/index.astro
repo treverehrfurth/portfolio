@@ -4,7 +4,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import SearchCollection from "@components/SearchCollection";
-import ArrowCard from "@components/ArrowCard";
+import FeaturedCard from "@components/FeaturedCard";
 import { BLOG } from "@consts";
 
 const posts = (await getCollection("blog"))
@@ -39,7 +39,7 @@ const estimated_initial_size =
         <ul class="space-y-4">
           {featured.map((post) => (
             <li>
-              <ArrowCard entry={post} />
+              <FeaturedCard entry={post} />
             </li>
           ))}
         </ul>
