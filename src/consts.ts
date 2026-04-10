@@ -10,7 +10,7 @@ export const SITE: Site = {
 // Work Page
 export const WORK: Page = {
   TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
+  DESCRIPTION: "Professional experience.",
 }
 
 // Blog Page
@@ -58,7 +58,7 @@ export const LINKS: Links = [
 // Accomplishments Page
 export const ACCOMPLISHMENTS: Page = {
   TITLE: "Accomplishments",
-  DESCRIPTION: "Certifications, education, and career highlights.",
+  DESCRIPTION: "Career highlights and milestones.",
 }
 
 // Socials

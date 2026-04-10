@@ -19,40 +19,70 @@ const work = await Promise.all(
 
 function formatWorkDate(input: Date | string) {
   if (typeof input === "string") return input
-
-  const month = input.toLocaleDateString("en-US", {
-    month: "short",
-  })
-
+  const month = input.toLocaleDateString("en-US", { month: "short" })
   const year = new Date(input).getFullYear()
   return `${month} ${year}`
+}
+
+// Group roles by company, preserving sort order (most recent company first)
+const companies: { name: string; roles: typeof work }[] = []
+for (const entry of work) {
+  const existing = companies.find(c => c.name === entry.data.company)
+  if (existing) {
+    existing.roles.push(entry)
+  } else {
+    companies.push({ name: entry.data.company, roles: [entry] })
+  }
 }
 ---
 
 <PageLayout title={WORK.TITLE} description={WORK.DESCRIPTION}>
   <SubtleBackground />
   <TopLayout>
-    <div class="animate page-heading">
-      {WORK.TITLE}
+    <div class="animate">
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+        {WORK.TITLE}
+      </h1>
+      <div class="mt-1">
+        {WORK.DESCRIPTION}
+      </div>
     </div>
   </TopLayout>
   <BottomLayout>
     <ul>
-      { 
-        work.map((entry) => (
+      {
+        companies.map((company) => (
           <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
-            <div class="text-sm uppercase mb-4">
-              {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}
+            <div class="text-black dark:text-white font-bold text-lg mb-4">
+              {company.name}
             </div>
-            <div class="text-black dark:text-white font-semibold">
-              {entry.data.company}
-            </div>
-            <div class="text-sm font-semibold">
-              {entry.data.role}
-            </div>
-            <article class="prose dark:prose-invert">
-              <entry.Content />
-            </article>
+            <ul class="space-y-4">
+              {company.roles.map((entry, i) => (
+                <li>
+                  <div class={company.roles.length > 1 ? "border-l-2 border-black/10 dark:border-white/20 pl-4" : ""}>
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:gap-3 mb-2">
+                    <div class="font-semibold text-black dark:text-white">
+                      {entry.data.role}
+                    </div>
+                    {company.roles.length > 1 && (
+                      <span class="hidden sm:inline text-black/20 dark:text-white/20">·</span>
+                    )}
+                    <div class="text-sm opacity-60">
+                      {formatWorkDate(entry.data.dateStart)} – {formatWorkDate(entry.data.dateEnd)}
+                    </div>
+                    {i < company.roles.length - 1 && company.roles.length > 1 && (
+                      <span class="text-xs px-2 py-0.5 rounded-full border border-black/15 dark:border-white/20 text-black/50 dark:text-white/50 w-fit">
+                        Promoted
+                      </span>
+                    )}
+                  </div>
+                  <article class="prose dark:prose-invert [&>*:last-child]:mb-0 !pb-0">
+                    <entry.Content />
+                  </article>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </li>
         ))
       }

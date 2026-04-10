@@ -21,8 +21,13 @@ const items = await Promise.all(
 <PageLayout title={ACCOMPLISHMENTS.TITLE} description={ACCOMPLISHMENTS.DESCRIPTION}>
   <SubtleBackground />
   <TopLayout>
-    <div class="animate page-heading">
-      {ACCOMPLISHMENTS.TITLE}
+    <div class="animate">
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+        {ACCOMPLISHMENTS.TITLE}
+      </h1>
+      <div class="mt-1">
+        {ACCOMPLISHMENTS.DESCRIPTION}
+      </div>
     </div>
   </TopLayout>
   <BottomLayout>
