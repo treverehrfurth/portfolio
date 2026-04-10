@@ -54,7 +54,7 @@ main {
 
 header {
   @apply border-b;
-  @apply transition-all duration-300 ease-in-out;
+  @apply transition-colors duration-300 ease-in-out;
 }
 
 header:not(.scrolled) {
