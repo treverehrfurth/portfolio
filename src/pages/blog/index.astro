@@ -6,6 +6,7 @@ import BottomLayout from "@layouts/BottomLayout.astro";
 import SearchCollection from "@components/SearchCollection";
 import FeaturedCard from "@components/FeaturedCard";
 import { BLOG } from "@consts";
+import SubtleBackground from "@components/SubtleBackground.astro";
 
 const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -22,6 +23,7 @@ const estimated_initial_size =
 ---
 
 <PageLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+  <SubtleBackground />
   <TopLayout>
     <div class="animate">
       <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">

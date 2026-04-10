@@ -4,6 +4,7 @@ import PageLayout from "@layouts/PageLayout.astro"
 import TopLayout from "@layouts/TopLayout.astro"
 import BottomLayout from "@layouts/BottomLayout.astro"
 import { WORK } from "@consts"
+import SubtleBackground from "@components/SubtleBackground.astro"
 
 const collection = await getCollection("work")
 
@@ -29,6 +30,7 @@ function formatWorkDate(input: Date | string) {
 ---
 
 <PageLayout title={WORK.TITLE} description={WORK.DESCRIPTION}>
+  <SubtleBackground />
   <TopLayout>
     <div class="animate page-heading">
       {WORK.TITLE}
