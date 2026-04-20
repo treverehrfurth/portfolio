@@ -1,6 +1,6 @@
 ---
 title: "Enterprise Endpoint Management with Microsoft Intune"
-summary: "Deployed Intune across the organization to standardize device compliance and security enforcement, enabling all employees to operate on fully managed, policy-driven devices."
+summary: "Stood up Intune as the company's first centralized endpoint platform — replacing manual rebuilds and consumer-grade Windows Home devices with a scalable, policy-driven lifecycle."
 date: "Mar 1, 2025"
 tags:
   - Microsoft Intune
@@ -8,11 +8,12 @@ tags:
   - Compliance
 ---
 
-Stood up Microsoft Intune (Unified Endpoint Management) from scratch:
+Inherited an environment of unmanaged, consumer-grade laptops and manual rebuilds (often outsourced to Micro Center). Designed and deployed Intune as the first centralized endpoint platform:
 
-- Architected device configuration profiles and compliance policies for Windows and macOS
-- Automated provisioning of compliant workstations for onshore and offshore employees
-- Enforced security baselines, disk encryption, and patch management at scale
-- Reduced manual IT onboarding overhead significantly
+- Built tenant configuration, enrollment, and automated provisioning to eliminate manual rebuilds
+- Enforced security baselines: BitLocker, firewall, AV, LAPS, update compliance, location services
+- Automated M365 app delivery, OneDrive auto sign-in with storage redirection, and Company Portal for approved software
+- Stood up Universal Print end-to-end — Ohio HQ printer connected via Windows Server VM and site-to-site IPsec VPN
+- Authored enrollment and reprovisioning runbooks and trained IT staff on ongoing administration
 
-Result: every managed device now operates under consistent security enforcement — no manual exceptions, no unmanaged endpoints.
+Result: a scalable, repeatable lifecycle that eliminated reliance on third-party reinstalls, closed the gap on corporate credential sign-in, and brought every device under consistent security enforcement.
