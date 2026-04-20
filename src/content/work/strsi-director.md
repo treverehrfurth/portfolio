@@ -5,9 +5,9 @@ dateStart: "Mar 1, 2025"
 dateEnd: "Present"
 ---
 
-Partner with executive leadership to drive enterprise technology strategy, security, and IT operations across the U.S., India, and Brazil.
+Partner with executive leadership to drive enterprise security governance, IT operations, and systems modernization across the U.S., India, and Brazil.
 
-- Led modernization of core platforms including CRM, HRIS, M365/Entra, endpoint management, and data & analytics — improving operational efficiency and employee experience across global teams.
-- Centralized identity and access management through SSO, SCIM provisioning, and Intune endpoint enforcement, reducing manual overhead and strengthening onboarding/offboarding security.
-- Hardened organizational security posture by implementing MFA enforcement, IDTR, zero trust remote access, and tenant guardrails to reduce risk and improve compliance readiness.
-- Launched an Azure-hosted internal documentation and self-service platform, and led data & analytics strategy to improve reporting accuracy and forecasting across the organization.
+- Developed and executed enterprise security governance and risk management strategy aligned to NIST CSF, ISO 27001, and SOC 2 across global operations.
+- Led modernization of core platforms (CRM, HRIS, M365/Entra, UEM) and centralized IAM through SSO and SCIM, enabling zero trust access and reducing lifecycle overhead.
+- Strengthened security posture with MFA, IDTR, encrypted email, Intune endpoint compliance, and Azure/Tailscale remote access for distributed teams.
+- Oversaw third-party risk, compliance assessments (SOC 2, ISO 27001, FedRAMP), incident investigations, and executive reporting on security posture and remediation progress.
