@@ -1,6 +1,6 @@
 ---
 title: "Enterprise IAM & Security Modernization"
-summary: "Centralized identity and access management across a global organization, eliminating shared accounts and reducing access drift through SSO, SCIM provisioning, and MFA enforcement."
+summary: "Centralized identity and access management across a global organization, expanding SSO and SCIM provisioning, enforcing company-wide MFA, and deploying identity threat detection and response."
 date: "Mar 1, 2025"
 featured: true
 draft: false
@@ -13,21 +13,21 @@ tags:
 
 ## Overview
 
-Led a comprehensive identity and access management modernization for a distributed organization operating across the U.S., India, and Brazil. The initiative addressed fragmented access controls, shared credentials, and inconsistent lifecycle management.
+Led a comprehensive identity and access management program for a distributed organization operating across the U.S., India, and Brazil. The initiative consolidated access onto Microsoft Entra ID, automated lifecycle operations, and tightened the tenant's overall security posture.
 
 ## What Was Done
 
-- Expanded SSO and implemented SCIM-based automated provisioning to reduce manual access administration
+- Expanded SSO across core platforms and implemented SCIM-based automated provisioning
 - Enforced company-wide MFA and deployed identity threat detection and response (IDTR)
-- Transitioned teams away from shared user accounts to functional shared mailboxes
-- Implemented dynamic security groups to reduce access drift
-- Removed high-risk third-party and AI applications through tenant policy enforcement
-- Established encrypted email controls and improved onboarding/offboarding security
+- Tightened Conditional Access for risk-based sign-in, offshore operations, and traveling users
+- Applied tenant policy to restrict high-risk third-party and AI applications
+- Aligned account lifecycle with HR events to streamline onboarding and offboarding
+- Investigated and retired a legacy MSP-installed security tool that was disrupting account state outside Conditional Access
 
 ## Outcome
 
-Significantly reduced manual access overhead, minimized lifecycle errors, and strengthened organizational security posture across all regions.
+Significantly reduced manual access overhead, minimized lifecycle errors, and strengthened organizational security posture across all regions. A number of component workstreams (functional mailboxes, dynamic distribution automation, Entra attribute standardization) are tracked as individual accomplishments.
 
 ## Stack
 
-Microsoft Entra ID · M365 · SCIM · SSO · Microsoft Intune · Conditional Access
+Microsoft Entra ID · M365 · SCIM · SSO · Conditional Access · Microsoft Intune

@@ -15,4 +15,4 @@ Replaced ad hoc remote access with a structured, secure architecture:
 - Established IPsec tunnels between Azure infrastructure and HQ to protect development systems
 - Enabled compliant access for remote and offshore teams without exposing internal systems to the public internet
 
-Result: internal systems are protected behind authenticated, encrypted access paths — no more open firewall rules or VPN exceptions.
+Result: internal systems are protected behind authenticated, encrypted access paths, with no more open firewall rules or VPN exceptions.

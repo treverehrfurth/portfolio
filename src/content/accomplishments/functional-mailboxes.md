@@ -1,6 +1,6 @@
 ---
 title: "Functional Shared Mailboxes & Departmental Email Governance"
-summary: "Migrated HR, Finance, and other departments off shared licensed user accounts into properly governed shared mailboxes — cutting license spend and closing access gaps."
+summary: "Established a standardized functional mailbox model for HR, Finance, and other departments, moving departmental email into properly governed Microsoft 365 shared mailboxes with delegated access."
 date: "Feb 15, 2025"
 tags:
   - Microsoft 365
@@ -8,11 +8,11 @@ tags:
   - Governance
 ---
 
-Departments like HR and Finance were operating out of shared licensed user accounts — sometimes even individual employee mailboxes — driving unnecessary licensing spend and creating real accountability and offboarding risk. Established a standardized functional mailbox model:
+Established a standardized functional mailbox model for departmental email, moving shared workflows into properly governed Microsoft 365 shared mailboxes with delegated access:
 
-- Migrated departmental access into properly managed shared mailboxes with delegated permissions (no shared credentials)
+- Migrated departmental access into properly managed shared mailboxes with delegated permissions instead of shared credentials
 - Built out structured Finance inboxes for AP, AR, taxes, and expenses
 - Stood up dedicated mailboxes for HR, Recruiting, Marketing, PMO, and general info routing
-- Eliminated license consumption on non-user accounts while improving auditability
+- Reduced license consumption on non-user accounts while improving auditability
 
-Result: a secure, cost-effective, and role-based approach to departmental email — with clear ownership, proper access governance, and no more shared credentials.
+Result: a secure, cost-effective, role-based approach to departmental email, with clear ownership, proper access governance, and clean offboarding.

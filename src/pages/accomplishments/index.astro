@@ -5,6 +5,7 @@ import TopLayout from "@layouts/TopLayout.astro"
 import BottomLayout from "@layouts/BottomLayout.astro"
 import { ACCOMPLISHMENTS } from "@consts"
 import SubtleBackground from "@components/SubtleBackground.astro"
+import AccomplishmentsFilter from "@components/AccomplishmentsFilter"
 
 const collection = await getCollection("accomplishments", ({ data }) => !data.draft)
 
@@ -16,6 +17,17 @@ const items = await Promise.all(
     return { ...item, Content }
   })
 )
+
+const filterItems = items.map((item) => ({
+  id: item.slug,
+  title: item.data.title,
+  summary: item.data.summary,
+  tags: item.data.tags ?? [],
+}))
+
+const allTags = Array.from(
+  new Set(filterItems.flatMap((i) => i.tags))
+).sort()
 ---
 
 <PageLayout title={ACCOMPLISHMENTS.TITLE} description={ACCOMPLISHMENTS.DESCRIPTION}>
@@ -31,9 +43,15 @@ const items = await Promise.all(
     </div>
   </TopLayout>
   <BottomLayout>
+    <div class="animate mb-6">
+      <AccomplishmentsFilter client:load items={filterItems} tags={allTags} />
+    </div>
     <ul>
       {items.map((entry) => (
-        <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
+        <li
+          data-accomplishment-id={entry.slug}
+          class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+        >
           <div class="text-sm uppercase mb-4">
             {entry.data.date.toLocaleDateString("en-US", { month: "short", year: "numeric" })}
           </div>

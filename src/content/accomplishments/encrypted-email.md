@@ -1,6 +1,6 @@
 ---
 title: "Encrypted Email & Do Not Forward Protection"
-summary: "Diagnosed and repaired a broken Exchange Online IRM ↔ Azure RMS binding to finally enable Purview Message Encryption and Do Not Forward protections tenant-wide."
+summary: "Enabled Microsoft Purview Message Encryption and Do Not Forward protections tenant-wide, repairing the underlying Exchange Online IRM to Azure RMS binding to bring encryption workflows fully online."
 date: "May 20, 2025"
 tags:
   - Microsoft Purview
@@ -8,7 +8,7 @@ tags:
   - Compliance
 ---
 
-Encrypted email and Do Not Forward had been partially attempted in the past but never actually worked — leaving Finance and HR with no secure way to send sensitive communications. Fully enabled Purview Message Encryption and IRM:
+Enabled Microsoft Purview Message Encryption and Information Rights Management tenant-wide, giving Finance, HR, and the broader organization a controlled way to send sensitive communications:
 
 - Diagnosed tenant-level failures preventing encryption workflows from running
 - Repaired the Exchange Online IRM to Azure RMS binding so the licensor certificate, templates, and service endpoints loaded correctly
